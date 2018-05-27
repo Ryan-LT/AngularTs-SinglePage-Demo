@@ -1,7 +1,6 @@
-#Before run the project
-Run npm install
-Run json-server --watch db.json
-Run ng serve --open
+#Before Run the project
+#Run 'npm install' - inside src folder
+#Run 'json-server --watch db.json' AngularTs-SinglePage-Demo folder
 
 # CrudDemo
 
