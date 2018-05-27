@@ -2,8 +2,8 @@
     <form action="">
         <div class="form-group" class="titleForm">
           <label for="title">Add News:</label>
-          <input [(ngModel)]="addingNews" name="addingNews" type="text" class="form-control" id="title">
-          <a class="button add" (click)="addNews()">Add</a>
+          <input placeholder="enter your news title" [(ngModel)]="addingNews" name="addingNews" type="text" class="form-control" id="title">
+          <a class="button add" (click)="addOrUpdateNews()">Add</a>
         </div>
       </form>
       
@@ -11,5 +11,10 @@
         <p routerLink="/news/{{post.id}}">{{post.id}}. {{post.title}}</p>
         <a class="button edit" (click)="editNews(post)">Edit</a>
         <a class="button delete" (click)="removeNews(post.id)">Delete</a>
+        <div *ngIf="selectedPost?.id === post?.id">
+            <input type="text">
+            <a class="button edit">Save</a>
+            <a class="button delete">Cancel</a>
+        </div>
       </div>
 </div>

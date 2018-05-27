@@ -9,9 +9,11 @@ import { NewsService } from '../../services/news.service';
 })
 export class HomeComponent implements OnInit {
   news : News[] = [];
-  addingNews = '';
+  addingNews = News;
   editingId: number;
   editingTitle = '';
+  selectedPost: News;
+  cancleForm = 0;
   
   constructor(private newsService: NewsService) { }
 
@@ -24,7 +26,7 @@ export class HomeComponent implements OnInit {
       .subscribe(result => this.news = result);
   }
 
-  addNews() {
+  addOrUpdateNews() {
     this.newsService.addNews(this.addingNews)
       .subscribe(newItem => this.news.push(newItem));
   }
@@ -32,5 +34,9 @@ export class HomeComponent implements OnInit {
   removeNews(id) {
       this.newsService.deleteById(id).subscribe();
       this.news = this.news.filter(news => news.id !== id);
+  }
+
+  editNews(post) {
+    this.selectedPost = post;
   }
 }
