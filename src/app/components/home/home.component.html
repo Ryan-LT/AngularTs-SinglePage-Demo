@@ -1,0 +1,15 @@
+<div class="wrapper">
+    <form action="">
+        <div class="form-group" class="titleForm">
+          <label for="title">Add News:</label>
+          <input [(ngModel)]="addingNews" name="addingNews" type="text" class="form-control" id="title">
+          <a class="button add" (click)="addNews()">Add</a>
+        </div>
+      </form>
+      
+      <div class="" *ngFor="let post of news">
+        <p routerLink="/news/{{post.id}}">{{post.id}}. {{post.title}}</p>
+        <a class="button edit" (click)="editNews(post)">Edit</a>
+        <a class="button delete" (click)="removeNews(post.id)">Delete</a>
+      </div>
+</div>

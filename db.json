@@ -1,0 +1,16 @@
+{
+  "news": [
+    {
+      "id": 1,
+      "title": "Sebastian"
+    },
+    {
+      "id": 2,
+      "title": "Steve"
+    },
+    {
+      "id": 3,
+      "title": "Ann"
+    }
+  ]
+}
