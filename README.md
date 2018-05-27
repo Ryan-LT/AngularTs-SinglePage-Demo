@@ -1,11 +1,3 @@
-# CrudDemo
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.0.
-
-##Before run the project
-Run npm install
-Run json-server --watch db.json
-Run ng serve --open
 
 ## Development server
 
